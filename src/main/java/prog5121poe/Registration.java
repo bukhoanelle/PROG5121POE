@@ -1,52 +1,65 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package prog5121poe;
+ 
 
-/**
- *
- * @author Student
- */
+//Registration.java
 public class Registration {
-    String username;
-    String password;
-    String cellphone;
-    public Registration(){
-    
+ 
+    private String firstName;
+    private String lastName;
+    private String username;
+    private String password;
+    private String cellPhoneNumber;
+ 
+    public Registration(String firstName,
+            String lastName, 
+            String username, 
+            String password,
+            String cellPhoneNumber) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.username = username;
+        this.password = password;
+        this.cellPhoneNumber = cellPhoneNumber;
     }
-
-    public String registerUser(String username, String password, String cellPhone) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-        
+ 
+    public String getFirstName() {
+        return firstName;
     }
-
-    void setUsername(String username) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+ 
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
-
-    void setPassword(String password) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+ 
+    public String getLastName() {
+        return lastName;
     }
-
-    void setCellPhone(String cellPhone) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+ 
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
-
-    Object getUsername() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+ 
+    public String getUsername() {
+        return username;
     }
-
-    Object getPassword() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+ 
+    public void setUsername(String username) {
+        this.username = username;
     }
-
-    String getFirstName() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+ 
+    public String getPassword() {
+        return password;
     }
-
-    String getLastName() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+ 
+    public void setPassword(String password) {
+        this.password = password;
     }
-    
+ 
+    public String getCellPhoneNumber() {
+        return cellPhoneNumber;
+    }
+ 
+    public void setCellPhoneNumber(String cellPhoneNumber) {
+        this.cellPhoneNumber = cellPhoneNumber;
+    }
 }
+ 
