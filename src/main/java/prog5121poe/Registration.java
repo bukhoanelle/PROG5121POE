@@ -1,65 +1,70 @@
 package prog5121poe;
- 
 
-//Registration.java
 public class Registration {
- 
     private String firstName;
     private String lastName;
     private String username;
     private String password;
-    private String cellPhoneNumber;
- 
-    public Registration(String firstName,
-            String lastName, 
-            String username, 
-            String password,
-            String cellPhoneNumber) {
+    private String cellphone;
+
+    public Registration() {
+    }
+
+    public String registerUser(String firstName, String lastName, String username, String password, String cellPhone) {
+        if (!Login.checkUserName(username)) {
+            return "Username is not correctly formatted; please ensure that your username contains an underscore and is no more than five characters in length.";
+        }
+
+        if (!Login.checkPasswordComplexity(password)) {
+            return "Password is not correctly formatted; please ensure that the password contains at least eight characters, a capital letter, a number, and a special character.";
+        }
+
+        if (!Login.checkCellPhoneNumber(cellPhone)) {
+            return "Cell number is incorrectly formatted or does not contain an international code; please correct the number and try again.";
+        }
+
         this.firstName = firstName;
         this.lastName = lastName;
         this.username = username;
         this.password = password;
-        this.cellPhoneNumber = cellPhoneNumber;
+        this.cellphone = cellPhone;
+
+        return "Username successfully captured. Password successfully captured. Cell number successfully captured.";
     }
- 
-    public String getFirstName() {
-        return firstName;
+
+    void setUsername(String username) {
+        this.username = username;
     }
- 
-    public void setFirstName(String firstName) {
+
+    void setPassword(String password) {
+        this.password = password;
+    }
+
+    void setCellPhone(String cellPhone) {
+        this.cellphone = cellPhone;
+    }
+
+    void setFirstName(String firstName) {
         this.firstName = firstName;
     }
- 
-    public String getLastName() {
-        return lastName;
-    }
- 
-    public void setLastName(String lastName) {
+
+    void setLastName(String lastName) {
         this.lastName = lastName;
     }
- 
-    public String getUsername() {
+
+    String getUsername() {
         return username;
     }
- 
-    public void setUsername(String username) {
-        this.username = username;
-    }
- 
-    public String getPassword() {
+
+    String getPassword() {
         return password;
     }
- 
-    public void setPassword(String password) {
-        this.password = password;
+
+    String getFirstName() {
+        return firstName;
     }
- 
-    public String getCellPhoneNumber() {
-        return cellPhoneNumber;
+
+    String getLastName() {
+        return lastName;
     }
- 
-    public void setCellPhoneNumber(String cellPhoneNumber) {
-        this.cellPhoneNumber = cellPhoneNumber;
-    }
-}
- 
+} 
