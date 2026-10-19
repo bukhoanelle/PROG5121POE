@@ -2,8 +2,6 @@ package prog5121poe;
 
 import java.util.Scanner;
 
-//Public class evaluation 
-
 public class Main {
 
     public static void main(String[] args) {
@@ -37,7 +35,8 @@ public class Main {
         String registrationMessage = registration.registerUser(firstName, lastName, username, password, cellPhone);
         System.out.println(registrationMessage);
 
-        //Checking if registration succeeds
+        // check if registration actually succeeded by testing the
+        // conditions again - if all pass, registration went through
         if (registrationMessage.contains("Username successfully captured.")
                 && registrationMessage.contains("Password successfully captured.")
                 && registrationMessage.contains("Cell number successfully captured.")) {
@@ -64,6 +63,3 @@ public class Main {
         input.close();
     }
 }
-}
- 
-
