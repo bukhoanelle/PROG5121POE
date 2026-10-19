@@ -67,4 +67,4 @@ public class Registration {
     String getLastName() {
         return lastName;
     }
-} 
+}
